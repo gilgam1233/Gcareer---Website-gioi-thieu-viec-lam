@@ -85,7 +85,6 @@ function chuKeoDaiNguoc(word, index = word.length - 1) {
     });
     
     if (index < 0) {
-        //console.log('index cua ham chu keo dai nguoc: ',index);
         return;
     };
     $(word[index]).addClass('chuKeoDaiNguoc').one('animationend', function () {
@@ -188,7 +187,6 @@ function desktop()
         var footer = document.querySelector('.footer');
         let maxHeight = document.body.offsetHeight;
 
-        // console.log(maxHeight);
         let footerCal = maxHeight - footer.offsetHeight - 300;
         let max = footerCal - 250 + 30;
 
@@ -1227,7 +1225,6 @@ function mobile()
     // javascript cho nút mở rộng
     $('#btnMoRong > div').click(function () {
 
-        console.log('click');
 
         let chu = $('#btnMoRong>div>div').text().toLowerCase();
 
@@ -1270,7 +1267,6 @@ function mobile()
         var footer = document.querySelector('.footer');
         let maxHeight = document.body.offsetHeight;
 
-        // console.log(maxHeight);
         let footerCal = maxHeight - footer.offsetHeight - 300;
         let max = footerCal - 250 + 30;
 
