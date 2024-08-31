@@ -155,9 +155,6 @@ body {
     margin-top: 10%;
 }
 
-.subMenuP>li:nth-child(6)>a {
-    padding: 0%;
-}
 
 .subMenuP>li>input {
     border-radius: 2rem;
