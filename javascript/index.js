@@ -50,6 +50,15 @@ function moRongMobile() {
 
 }
 
+function kiemTraChu()
+{
+    let word = document.querySelectorAll('.word');
+    $(word).off();
+    $(word).removeClass('chuKeoDai');
+    $(word).removeClass('chuKeoDaiNguoc');
+
+    $(word).css('width', '0');
+}
 
 function kiemTraMoRong(flag) {
     // đang search thì ẩn
@@ -70,6 +79,11 @@ function chuyenDoiChuoi(str) {
 
 
 function chuKeoDaiNguoc(word, index = word.length - 1) {
+    
+    $(window).resize(function () {
+        return ;
+    });
+    
     if (index < 0) {
         //console.log('index cua ham chu keo dai nguoc: ',index);
         return;
@@ -83,6 +97,11 @@ function chuKeoDaiNguoc(word, index = word.length - 1) {
 }
 
 function chuKeoDai(word, index = 0) {
+   
+    $(window).resize(function () {
+        return ;
+    });
+
     if (index >= word.length) {
         flag = false;
         return chuKeoDaiNguoc(word, word.length - 1);
@@ -112,6 +131,8 @@ function anArea() {
 
 function desktop()
 {
+    $('*').off();
+
     $('.subMenuP').hide();
     $('.word').off();
     let cntFilter = 1;
@@ -1164,9 +1185,12 @@ function desktop()
 
 let co = false; //false = bright mode
 
+let coThuGon = false
 
 function mobile()
 {
+    $('*').off();
+
     $('.subMenuP').hide();
     $('.menuPhone').on('click', function () {
         
@@ -1195,10 +1219,15 @@ function mobile()
     let cntSearch = 1;
     let cnt = 1;
     let flagMoRong = false;
-    thuGon();
-
+   if(coThuGon == false) 
+    {
+        thuGon();
+        coThuGon = true;
+    }
     // javascript cho nút mở rộng
     $('#btnMoRong > div').click(function () {
+
+        console.log('click');
 
         let chu = $('#btnMoRong>div>div').text().toLowerCase();
 
@@ -2139,6 +2168,8 @@ window.onload = function () {
     }
 
     $(window).on('resize', function () {
+        kiemTraChu();
+     
         if(window.innerWidth >= 1024)
         {
             desktop();
@@ -2149,24 +2180,5 @@ window.onload = function () {
         }
     });
 
-    // $(window).blur(function(){
-    //     let word = document.querySelectorAll('.word');
-
-    //     for(let x of word)
-    //         $(x).off();
-
-    // })
-
-    // $(window).focus(function(){
-    //     if(window.innerWidth > 1024)
-    //         {
-    //             desktop();
-    //         }
-    //         else if(window.innerWidth <= 500)
-    //         {
-    //             mobile();
-    //         }
-    
-    // });
 
 }
