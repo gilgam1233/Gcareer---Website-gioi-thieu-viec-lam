@@ -333,6 +333,7 @@ body {
     border-radius: 2rem;
     box-sizing: border-box;
     background-color: white;
+    min-width: auto;
 }
 
 .color>p{
@@ -910,5 +911,13 @@ footer>div:nth-child(2)>img{
     to {
         width: 370px;
         height: 230px;
+    }
+}
+
+
+@media (min-width : 896px) {
+    .color
+    {
+        padding: 7% 0.7%;
     }
 }
