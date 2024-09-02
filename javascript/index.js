@@ -1171,14 +1171,14 @@ function mobile() {
 
     $('#menuPhoneSearch').focus(function(){
         $('.subMenuP').css({'display':'block',
-                            'height':'40%')};
+                            'height':'40%'});
         $('.theme').hide();
     });
 
     $('#menuPhoneSearch').blur(function(){
         $('.theme').show();
-        $('.subMenuP').css({'display':'none',
-                            'height':'')};
+        $('.subMenuP').css({'display':'',
+                            'height':''});
     });
     
     let cntFilter = 1;
