@@ -1170,13 +1170,13 @@ function mobile() {
     });
 
     $('#menuPhoneSearch').focus(function(){
-        $('subMenuP').css('height','40%');
+        $('.subMenuP').css('height','40%');
         $('.theme').hide();
     });
 
     $('#menuPhoneSearch').blur(function(){
         $('.theme').show();
-        $('subMenuP').css('height','');
+        $('.subMenuP').css('height','');
     });
     
     let cntFilter = 1;
