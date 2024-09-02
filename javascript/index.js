@@ -2129,6 +2129,7 @@ window.onload = function () {
     $('.subMenuP').hide();
 
     kiemTraManHinh();
+    checkMoveToTop();
 
     $(window).on('resize', function () {
         kiemTraChu();
