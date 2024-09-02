@@ -79,6 +79,7 @@ function chuyenSlide() {
 }
 
 function desktop() {
+    $('*').off();
 
     // email
     $('#email').focus(function () {
@@ -301,7 +302,7 @@ function desktop() {
     $('#dangKy').click(function(){
         if(kiemTra())
         {
-            $('a').attr('href','../index.html');
+            window.location.href = '../index.html';
         }
        
     })
@@ -309,10 +310,12 @@ function desktop() {
 }
 
 function mobile() {
+    $('*').off();
+
     $('#dangKy').click(function(){
         if(kiemTra())
         {
-            $('a').attr('href','../index.html');
+            window.location.href = '../index.html';
         }
        
     })
