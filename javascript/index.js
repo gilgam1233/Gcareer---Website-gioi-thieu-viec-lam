@@ -1170,17 +1170,19 @@ function mobile() {
     });
 
     $('#menuPhoneSearch').focus(function(){
-        $('.subMenuP').css({'display':'block',
-                            'height':'40%'});
+        $('.subMenuP').css({'height':'40%',
+                            'display':'block'
+        });
         $('.theme').hide();
     });
 
     $('#menuPhoneSearch').blur(function(){
         $('.theme').show();
-        $('.subMenuP').css({'display':'',
-                            'height':''});
+        $('.subMenuP').css({'height':'',
+            'display':''
+});
     });
-    
+
     let cntFilter = 1;
     let btn = document.querySelector('#btnMoRong>div');
     let cntSearch = 1;
