@@ -1177,7 +1177,7 @@ function mobile() {
 
     $('#menuPhoneSearch').blur(function(){
         $('.theme').show();
-        $('.subMenuP').css({'display':'',
+        $('.subMenuP').css({'display':'none',
                             'height':'')};
     });
     
