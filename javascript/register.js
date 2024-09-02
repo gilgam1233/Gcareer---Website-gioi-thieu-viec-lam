@@ -151,11 +151,14 @@ function kiemTra(){
 
 function desktop()
 {
+    $('*').off();
+
+
         $('#dangKy').click(function () {
             
             if(kiemTra() == true && checkPassword() == true)
             {
-                $('a').attr('href','../index.html');
+                window.location.href = '../index.html';
             }
         });
 
@@ -477,7 +480,8 @@ function desktop()
 }
 
 function mobile(){
- 
+    $('*').off();
+
          // name
          $('#name').focus(function () {
             if ($('#name').val() == '') {
@@ -658,7 +662,7 @@ function mobile(){
             
             if(kiemTra() == true && checkPassword() == true)
             {
-                $('a').attr('href','../index.html');
+                window.location.href = '../index.html';
             }
         });
 
