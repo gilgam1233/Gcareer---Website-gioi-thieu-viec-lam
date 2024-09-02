@@ -1170,7 +1170,7 @@ function mobile() {
     });
 
     $('#menuPhoneSearch').focus(function(){
-        $('.subMenuP').css({'height':'40%',
+        $('.subMenuP').css({'height':'20%',
                             'display':'block'
         });
         $('.theme').hide();
