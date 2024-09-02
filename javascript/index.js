@@ -1170,14 +1170,14 @@ function mobile() {
     });
 
     $('#menuPhoneSearch').focus(function(){
-        $('.subMenuP').css({'position':'sticky',
+        $('.subMenuP').css({'display':'block',
                             'height':'40%')};
         $('.theme').hide();
     });
 
     $('#menuPhoneSearch').blur(function(){
         $('.theme').show();
-        $('.subMenuP').css({'position':'',
+        $('.subMenuP').css({'display':'',
                             'height':'')};
     });
     
