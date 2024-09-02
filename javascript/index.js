@@ -1169,6 +1169,16 @@ function mobile() {
         $('.thongBao').removeClass("active");
     });
 
+    $('#menuPhoneSearch').focus(function(){
+        $('subMenuP').css('height','40%');
+        $('.theme').hide();
+    });
+
+    $('#menuPhoneSearch').blur(function(){
+        $('.theme').show();
+        $('subMenuP').css('height','');
+    });
+    
     let cntFilter = 1;
     let btn = document.querySelector('#btnMoRong>div');
     let cntSearch = 1;
