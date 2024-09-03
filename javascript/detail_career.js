@@ -151,7 +151,7 @@ function desktop() {
         $('.salary > p').css('color', '');
 
         $('.career .salary').css({
-            'color': ''
+            'color': 'pink'
         })
 
         $('.career .location').css({
@@ -177,10 +177,10 @@ function desktop() {
         $('.detail>p').css('color', '');
 
         $('.below p').css({
-            'color': 'black'
+            'color': ''
         })
 
-        $('.below h2').css('color', 'black');
+        $('.below h2').css('color', '');
     }
 
 
@@ -535,13 +535,16 @@ function desktop() {
                 'background-color': '#292a2d',
                 
             })
-            $('.below p,h2').css({
+            $('.below h2').css({
                 'color': 'white'
             })
+
+            $('.below p').css('color', 'white');
             $('.career div').css({
                 'background-color': 'rgb(49,51,56)',
                 'color': 'white'
             })
+            $('p.location').css({'color':'gray'});
             $('.career .salary').css({
                 'color': 'lightskyblue'
             })
@@ -816,7 +819,7 @@ function mobile() {
         $('.career .salary').css({
             'color': 'lightskyblue'
         })
-        $('.career .location').css({
+        $('.career p.location').css({
             'color': 'gray'
         })
 
@@ -900,10 +903,10 @@ function mobile() {
         $('.detail>p').css('color', '');
 
         $('.below p').css({
-            'color': 'black'
+            'color': ''
         })
 
-        $('.below h2').css('color', 'black');
+        $('.below h2').css('color', '');
 
     }
 
@@ -1328,7 +1331,18 @@ function mobile() {
                 'color': 'white'
             })
 
-            $('.below h2').css('color', 'white');
+            $('.below h2').css({
+                'color': 'white'
+            })
+
+            $('.below p').css('color', 'white');
+            $('.career div').css({
+                'background-color': 'rgb(49,51,56)',
+                'color': 'white'
+            })
+            $('p.location').css({'color':'gray'});
+            $('.career .salary').css({
+                'color': 'lightskyblue'});
 
 
             $('footer').css({
