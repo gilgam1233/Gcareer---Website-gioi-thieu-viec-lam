@@ -267,7 +267,8 @@ function desktop() {
 
     if (co == true) {
     
-        $('.imgjob + div,p').css('color', 'gray');
+        $('.imgjob + div').css('color', 'white');
+        $('.imgjob + p').css('color', 'white');
         $('.word').css('color', 'white');
         $('.topjob p').css('color', '');
         $('.topjob>div').css('background-color', 'rgba(2, 47, 68, 0.28)');
@@ -312,8 +313,8 @@ function desktop() {
         })
     }
     else {
-    
-        $('.imgjob + div,p').css('color', '');
+        $('.imgjob + div').css('color', '');
+        $('.imgjob + p').css('color', '');
         $('.word').css('color', '');
         $('.topjob p').css('color', '');
         $('.topjob>div').css('background-color', '');
@@ -1253,7 +1254,9 @@ function mobile() {
         $('.phone').css('background-color', '#292a2d');
         $('.topjobs_p').css('background-color', '#202124');
         $('.topjobs_p .topjob>div').css('background-color', '#292a2d');
-        $('.imgjob + div,p').css('color', 'gray');
+        $('.imgjob + div').css('color', 'white');
+        $('.topjobs_p .topjob p').css('color', 'white');
+
         $('.word').css('color', 'lightskyblue');
         $('.words').css('color', 'white');
 
@@ -1280,7 +1283,9 @@ function mobile() {
         $('.phone').css('background-color', '');
         $('.topjobs_p').css('background-color', '');
         $('.topjobs_p .topjob>div').css('background-color', '');
-        $('.imgjob + div,p').css('color', '');
+        $('.topjobs_p .topjob p').css('color', '');
+        $('.imgjob + div').css('color', '');
+
         $('.word').css('color', '');
         $('.words').css('color', '');
 
