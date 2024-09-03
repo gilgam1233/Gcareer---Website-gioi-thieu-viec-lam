@@ -60,7 +60,7 @@ body {
 /* SUBMENU */
 .subMenuP{
     background-color: white;
-    position: fixed;
+    position: sticky;
     list-style-type: none;
     padding: 4%;
     padding-top: 2%;
