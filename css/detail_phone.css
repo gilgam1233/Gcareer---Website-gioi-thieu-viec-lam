@@ -381,6 +381,7 @@ body {
 .career{
     box-sizing: border-box;
     padding: 0.4rem;
+    height: 140px;
 }
 
 .career>a{
@@ -395,6 +396,7 @@ body {
     padding: 0.8rem;
     background-color: white;
     width: 100%;
+    height: 100%;
 }
 
 .career>a>div:hover{
@@ -402,7 +404,7 @@ body {
 }
 
 .career:hover{
-    background: radial-gradient(lightskyblue,white);
+    background: radial-gradient(lightskyblue,transparent);
     border-radius: 1rem;
 }
 
@@ -411,25 +413,34 @@ body {
     height: 100%;
     align-self: center;
     position: relative;
+    box-sizing: border-box;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
 }
 
-.career .imgcareer::after{
+/* .career .imgcareer::after{
     content: "";
     width: 0.5px;
     height: 100%;
     right: 10%;
     position: absolute;
     background-color: gainsboro;
-}
+} */
 
 .career .imgcareer>img{
-    width: 80%;
+    width: 100%;
+    height: fit-content;
+    max-width: min-content;
+    max-height: 100%;
+    align-self: center;
 }
 
 .career .detail{
     width: 80%;
     box-sizing: border-box;
     padding-left: 0.5rem;
+    align-self: center;
 }
 
 .name{
@@ -466,7 +477,6 @@ body {
     scrollbar-width: none;
     z-index: 1;
     position: relative;
-    background-color: white;
     box-sizing: border-box;
     padding: 2%;
 }
@@ -514,7 +524,7 @@ body {
 }
 
 .topcmp:hover{
-    background: radial-gradient(rgba(135, 206, 250, 0.4),whitesmoke);
+    background: radial-gradient(rgba(135, 206, 250, 0.4),transparent);
     border-radius: 1rem;
 }
 

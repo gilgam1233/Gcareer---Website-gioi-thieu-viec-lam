@@ -402,7 +402,6 @@ body {
     scrollbar-width: none;
     z-index: 1;
     position: relative;
-    background-color: white;
     box-sizing: border-box;
     padding: 2%;
 }
@@ -446,7 +445,7 @@ body {
 }
 
 .topcmp:hover {
-    background: radial-gradient(rgba(135, 206, 250, 0.4), whitesmoke)
+    background: radial-gradient(rgba(135, 206, 250, 0.4), transparent)
 }
 
 .imgcmp {

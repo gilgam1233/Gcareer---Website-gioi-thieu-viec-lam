@@ -131,11 +131,16 @@ function anArea() {
     }
 }
 
+let co = false; //false = bright mode
+
+
 function desktop() {
     $('*').off();
 
     $('.subMenuP').hide();
     $('.word').off();
+    $('.words').css('color', '');
+
     let cntFilter = 1;
     let btn = document.querySelector('#btnMoRong>div');
     let cntSearch = 1;
@@ -259,6 +264,99 @@ function desktop() {
 
     });
 
+
+    if (co == true) {
+    
+        $('.imgjob + div,p').css('color', 'gray');
+        $('.word').css('color', 'white');
+        $('.topjob p').css('color', '');
+        $('.topjob>div').css('background-color', 'rgba(2, 47, 68, 0.28)');
+        let menu = document.querySelectorAll('.menu>li>a');
+        for (let i = 0; i < menu.length; i++) {
+            $(menu[i + 1]).on('mouseenter', function () {
+                $(this).css({
+                    'color': 'lightskyblue',
+                    'background-color': 'rgb(49,51,56)'
+                })
+            })
+            $(menu[i + 1]).on('mouseleave', function () {
+                $(this).css({
+                    'color': '',
+                    'background-color': ''
+                })
+            })
+        }
+        let users = document.querySelectorAll('.users>li');
+        for (let y = 0; y < users.length; y++) {
+            $(users[y]).on('mouseenter', function () {
+                $(this).css({
+                    'color': 'lightskyblue',
+                    'background-color': 'rgb(49,51,56)'
+                })
+            })
+            $(users[y]).on('mouseleave', function () {
+                $(this).css({
+                    'color': '',
+                    'background-color': ''
+                })
+            })
+        }
+        $('.salary').css({
+            'color': 'lightskyblue'
+        })
+        $('.detail>p').css({
+            'color': 'lightgray'
+        })
+        $('.name').css({
+            'color': 'white'
+        })
+    }
+    else {
+    
+        $('.imgjob + div,p').css('color', '');
+        $('.word').css('color', '');
+        $('.topjob p').css('color', '');
+        $('.topjob>div').css('background-color', '');
+        $('.salary').css({
+            'color': ''
+        })
+        $('.detail>p').css({
+            'color': ''
+        })
+        $('.name').css({
+            'color': ''
+        })
+        let menu = document.querySelectorAll('.menu>li>a');
+        for (let i = 0; i < menu.length; i++) {
+            $(menu[i + 1]).on('mouseenter', function () {
+                $(this).css({
+                    'color': '',
+                    'background-color': ''
+                })
+            })
+            $(menu[i + 1]).on('mouseleave', function () {
+                $(this).css({
+                    'color': '',
+                    'background-color': ''
+                })
+            })
+        }
+        let users = document.querySelectorAll('.users>li');
+        for (let y = 0; y < users.length; y++) {
+            $(users[y]).on('mouseenter', function () {
+                $(this).css({
+                    'color': '',
+                    'background-color': ''
+                })
+            })
+            $(users[y]).on('mouseleave', function () {
+                $(this).css({
+                    'color': '',
+                    'background-color': ''
+                })
+            })
+        }
+    }
 
     // javascript cho sự kiện tìm kiếm ở thanh taskbar
     $('#taskbarSearch').change(function () {
@@ -559,7 +657,7 @@ function desktop() {
 
 
     // DARK MODE
-    let co = false; //false = bright mode
+    //let co = false; //false = bright mode
     //chỉnh từ dark mode sang bright mode
     $('#sun').click(function () {
         if (co == true) {
@@ -821,19 +919,7 @@ function desktop() {
             $('.imgcmp>img').css({
                 'background-color': 'white'
             })
-            let topcmp = document.querySelectorAll('.topcmp');
-            for (let x = 0; x < topcmp.length; x++) {
-                $(topcmp[x]).on('mouseenter', function () {
-                    $(this).css({
-                        'background': 'radial-gradient(rgba(135, 206, 250, 0.4),#292a2d)'
-                    })
-                })
-                $(topcmp[x]).on('mouseleave', function () {
-                    $(this).css({
-                        'background': 'initial'
-                    })
-                })
-            }
+         
             $('.topcmp h4').css({
                 'color': 'whitesmoke'
             })
@@ -889,7 +975,7 @@ function desktop() {
         {
             $('#sun').removeClass('haoquang').addClass('sunOff');
             $('#sun').css({
-                'color': '',
+                'color': 'gainsboro',
                 'border': '0',
             })
             $('#moon').removeClass('moonOff').addClass('moonOn');
@@ -1139,7 +1225,6 @@ function desktop() {
 }
 
 
-let co = false; //false = bright mode
 
 let coThuGon = false
 
@@ -1156,6 +1241,61 @@ function mobile() {
     })
 
     $('.word').off();
+
+    if (co == true) {
+
+        $('.underline').css('background', 'white');
+        $('.subMenuP>li>input').css('color', 'white');
+        $('.subMenuP>li>button > i').css('color', 'white');
+        $('.subMenuP>li>a').css('color', 'white');
+        $('.subMenuP>li').css('color', 'white');
+        $('.subMenuP').css('background-color', '#292a2d');
+        $('.phone').css('background-color', '#292a2d');
+        $('.topjobs_p').css('background-color', '#202124');
+        $('.topjobs_p .topjob>div').css('background-color', '#292a2d');
+        $('.imgjob + div,p').css('color', 'gray');
+        $('.word').css('color', 'lightskyblue');
+        $('.words').css('color', 'white');
+
+
+        $('.salary').css({
+            'color': 'lightskyblue'
+        })
+        $('.detail>p').css({
+            'color': 'lightgray'
+        })
+        $('.name').css({
+            'color': 'white'
+        })
+
+    }
+    else {
+        $('.topcmps').css('background-color', '');
+        $('.underline').css('background', '');
+        $('.subMenuP>li>input').css('color', '');
+        $('.subMenuP>li>button > i').css('color', '');
+        $('.subMenuP>li>a').css('color', '');
+        $('.subMenuP>li').css('color', '');
+        $('.subMenuP').css('background-color', '');
+        $('.phone').css('background-color', '');
+        $('.topjobs_p').css('background-color', '');
+        $('.topjobs_p .topjob>div').css('background-color', '');
+        $('.imgjob + div,p').css('color', '');
+        $('.word').css('color', '');
+        $('.words').css('color', '');
+
+        $('.salary').css({
+            'color': ''
+        })
+        $('.detail>p').css({
+            'color': ''
+        })
+
+        $('.name').css({
+            'color': ''
+        })
+
+    }
 
     let bell = document.querySelector('.bell');
 
@@ -1633,7 +1773,6 @@ function mobile() {
     //chuyển từ bright mode sang dark mode
     $('#moon').click(function () {
         if (co == false) {
-            $('.topcmps').css('background-color', '#292a2d');
             $('.underline').css('background', 'white');
             $('.subMenuP>li>input').css('color', 'white');
             $('.subMenuP>li>button > i').css('color', 'white');
@@ -1763,19 +1902,7 @@ function mobile() {
             $('.imgcmp>img').css({
                 'background-color': 'white'
             })
-            let topcmp = document.querySelectorAll('.topcmp');
-            for (let x = 0; x < topcmp.length; x++) {
-                $(topcmp[x]).on('mouseenter', function () {
-                    $(this).css({
-                        'background': 'radial-gradient(rgba(135, 206, 250, 0.4),#292a2d)'
-                    })
-                })
-                $(topcmp[x]).on('mouseleave', function () {
-                    $(this).css({
-                        'background': 'initial'
-                    })
-                })
-            }
+
             $('.topcmp h4').css({
                 'color': 'whitesmoke'
             })
@@ -1831,7 +1958,7 @@ function mobile() {
         {
             $('#sun').removeClass('haoquang').addClass('sunOff');
             $('#sun').css({
-                'color': '',
+                'color': 'gainsboro',
                 'border': '0',
             })
             $('#moon').removeClass('moonOff').addClass('moonOn');

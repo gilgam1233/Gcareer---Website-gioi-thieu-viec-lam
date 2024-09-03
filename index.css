@@ -404,6 +404,12 @@ header{
     display: flex; 
     align-items: center;
 }
+
+#jobs
+{
+    scroll-margin-top: 3rem;
+
+}
 /* LISTs CSS */
 .lists{
     background-color: whitesmoke;
@@ -710,7 +716,7 @@ header{
 }
 
 .topcmp:hover{
-    background: radial-gradient(rgba(135, 206, 250, 0.4),whitesmoke)
+    background: radial-gradient(rgba(135, 206, 250, 0.4),transparent);
 }
 
 .imgcmp{

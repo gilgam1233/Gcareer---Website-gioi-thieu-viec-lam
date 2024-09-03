@@ -1,3 +1,6 @@
+let co = false; //false = bright mode
+
+
 function desktop() {
     $('*').off();
     let close = document.querySelector('#close');
@@ -27,6 +30,104 @@ function desktop() {
         'display': 'block'
     })
 
+
+    if (co == true) {
+
+        $('.topcmps').css('background-color', '#292a2d');
+        $('.underline').css('background', 'white');
+        $('.subMenuP>li>input').css('color', 'white');
+        $('.subMenuP>li>button > i').css('color', 'white');
+        $('.subMenuP>li>a').css('color', 'white');
+        $('.subMenuP>li').css('color', 'white');
+        $('.subMenuP').css('background-color', '#292a2d');
+        $('.phone').css('background-color', '#292a2d');
+        $('.topjobs_p').css('background-color', '#202124');
+        $('.topjobs_p .topjob>div').css('background-color', '#292a2d');
+        $('.imgjob + div,p').css('color', 'white');
+        $('.word').css('color', 'white');
+        $('.topjob p').css('color', '');
+        $('.topjob>div').css('background-color', 'rgba(2, 47, 68, 0.28)');
+        let menu = document.querySelectorAll('.menu>li>a');
+        for (let i = 0; i < menu.length; i++) {
+            $(menu[i + 1]).on('mouseenter', function () {
+                $(this).css({
+                    'color': 'lightskyblue',
+                    'background-color': 'rgb(49,51,56)'
+                })
+            })
+            $(menu[i + 1]).on('mouseleave', function () {
+                $(this).css({
+                    'color': '',
+                    'background-color': ''
+                })
+            })
+        }
+        let users = document.querySelectorAll('.users>li');
+        for (let y = 0; y < users.length; y++) {
+            $(users[y]).on('mouseenter', function () {
+                $(this).css({
+                    'color': 'lightskyblue',
+                    'background-color': 'rgb(49,51,56)'
+                })
+            })
+            $(users[y]).on('mouseleave', function () {
+                $(this).css({
+                    'color': '',
+                    'background-color': ''
+                })
+            })
+        }
+        $('.choice>a:last-child>p').css('color', '');
+        $('.bigbackground>p').css('color', 'black');
+    }
+    else {
+        $('.topcmps').css('background-color', '');
+        $('.underline').css('background', '');
+        $('.subMenuP>li>input').css('color', '');
+        $('.subMenuP>li>button > i').css('color', '');
+        $('.subMenuP>li>a').css('color', '');
+        $('.subMenuP>li').css('color', '');
+        $('.subMenuP').css('background-color', '');
+        $('.phone').css('background-color', '');
+        $('.topjobs_p').css('background-color', '');
+        $('.topjobs_p .topjob>div').css('background-color', '');
+        $('.imgjob + div,p').css('color', '');
+        $('.word').css('color', '');
+        $('.topjob p').css('color', '');
+        $('.topjob>div').css('background-color', '');
+        let menu = document.querySelectorAll('.menu>li>a');
+        for (let i = 0; i < menu.length; i++) {
+            $(menu[i + 1]).on('mouseenter', function () {
+                $(this).css({
+                    'color': '',
+                    'background-color': ''
+                })
+            })
+            $(menu[i + 1]).on('mouseleave', function () {
+                $(this).css({
+                    'color': '',
+                    'background-color': ''
+                })
+            })
+        }
+        let users = document.querySelectorAll('.users>li');
+        for (let y = 0; y < users.length; y++) {
+            $(users[y]).on('mouseenter', function () {
+                $(this).css({
+                    'color': '',
+                    'background-color': ''
+                })
+            })
+            $(users[y]).on('mouseleave', function () {
+                $(this).css({
+                    'color': '',
+                    'background-color': ''
+                })
+            })
+        }
+        $('.choice>a:last-child>p').css('color', '');
+        $('.bigbackground>p').css('color', '');
+    }
 
 
     $('.preview').on('click', function (event) {
@@ -79,11 +180,10 @@ function desktop() {
     }
 
     // DARK MODE
-    let co = false; //false = bright mode
+    //let co = false; //false = bright mode
     //chỉnh từ dark mode sang brigth mode
     $('#sun').click(function () {
         if (co == true) {
-            co = false;
             $('#sun').css({
                 'color': 'gold',
                 'border': '3px solid gold'
@@ -94,10 +194,6 @@ function desktop() {
             })
             $('body').css({
                 'background-color': 'white'
-            })
-            $('header').css({
-                'background-color': '',
-                'color': ''
             })
             $('header').css({
                 'background-color': '',
@@ -128,14 +224,12 @@ function desktop() {
             let users = document.querySelectorAll('.users>li');
             for (let y = 0; y < users.length; y++) {
                 $(users[y]).on('mouseenter', function () {
-
                     $(this).css({
                         'color': '',
                         'background-color': ''
                     })
                 })
                 $(users[y]).on('mouseleave', function () {
-
                     $(this).css({
                         'color': '',
                         'background-color': ''
@@ -145,15 +239,51 @@ function desktop() {
             $('.bigbackground>p').css({
                 'color': ''
             })
-            $('.cv>div').css({
-                'background-color': '',
-                'border': ''
+            $('.main').css({
+                'background-color': ''
             })
-            let cv = document.querySelectorAll('.cv');
+            $('.info>div').css({
+                'background-color': '',
+                'color': ''
+            })
+            $('.info>div:first-child i').css({
+                'color': ''
+            })
+            $('.info>div:last-child i').css({
+                'color': ''
+            })
+            $('.lienhe').css({
+                'background-color': '',
+                'color': ''
+            })
+            $('.lienhe a').css({
+                'color': ''
+            })
+            $('.salary').css({
+                'color': ''
+            })
+            $('.salary > p').css({
+                'color': ''
+            })
+            $('.info p').css({'color':''});
+            $('.details').css({
+                'background-color': '',
+                'color': ''
+            })
+            $('.below').css({
+                'background-color': '',
+                'color': ''
+            })
+            $('.career div').css({
+                'background-color': '',
+                'color': ''
+            })
+            let cv = document.querySelectorAll('.career');
             for (let x = 0; x < cv.length; x++) {
                 $(cv[x]).on('mouseenter', function () {
                     $(this).css({
                         'background': '',
+                        'border-color': ''
                     })
                 })
                 $(cv[x]).on('mouseleave', function () {
@@ -162,19 +292,21 @@ function desktop() {
                     })
                 })
             }
-            $('.imgCV').css({
-                'background': ''
-            })
-            $('.cv>div>a>p').css({
-                'color': ''
-            })
-            $('.form').css({
-                'background': ''
-            })
-            $('.design').css({
-                'background': ''
-            })
-            $('.color>p').css({
+            let topcmp = document.querySelectorAll('.topcmp');
+            for (let x = 0; x < topcmp.length; x++) {
+                $(topcmp[x]).on('mouseenter', function () {
+                    $(this).css({
+                        'background': ''
+                    })
+                })
+                $(topcmp[x]).on('mouseleave', function () {
+                    $(this).css({
+                        'background': ''
+                    })
+                })
+            }
+            $('.topcmp>div').css({
+                'background-color': '',
                 'color': ''
             })
             $('footer').css({
@@ -186,12 +318,18 @@ function desktop() {
             $('footer p').css({
                 'color': ''
             })
+
+            $('.below p').css({
+                'color': ''
+            })
+    
+            $('.below h2').css('color', '');
+            co = false;
         }
     });
     //chuyển từ bright mode sang dark mode
     $('#moon').click(function () {
         if (co == false) {
-            co = true;
             $(this).removeClass('moonOn moonOff').addClass('moonOn');
             $('#sun').css({
                 'color': 'gray',
@@ -244,39 +382,77 @@ function desktop() {
             $('.bigbackground>p').css({
                 'color': 'black'
             })
-            $('.cv>div').css({
-                'background-color': '#292a2d',
-                'border': '0',
+            $('.main').css({
+                'background-color': '#292a2d'
             })
-            let cv = document.querySelectorAll('.cv>div');
-            for (let x = 0; x < cv.length; x++) {
-                $(cv[x]).on('mouseenter', function () {
-                    $(this).css({
-                        'box-shadow': '0 0 2rem 0.5rem rgba(135, 206, 250,0.2)'
-                    })
-                })
-                $(cv[x]).on('mouseleave', function () {
-                    $(this).css({
-                        'box-shadow': ''
-                    })
-                })
-            }
-            $('.imgCV').css({
-                'background': 'rgb(49,51,56)'
-            })
-            $('.cv>div>a>p').css({
+            $('.info>div').css({
+                'background-color': 'rgb(49,51,56)',
                 'color': 'white'
             })
-            $('.choice').css({
-                'background': 'linear-gradient(transparent, rgba(20,42,56,0.3), rgba(28,89,129,0.6))'
+            $('.info>div:first-child i').css({
+                'color': 'black'
             })
-            $('.form').css({
-                'background': '#292a2d'
+            $('.info>div:last-child i').css({
+                'color': '#97bdd4'
             })
-            $('.design').css({
-                'background': 'rgb(49,51,56)'
+            $('.lienhe').css({
+                'background-color': 'rgb(49,51,56)',
+                'color': 'white'
             })
-            $('.color>p').css({
+            $('.lienhe a').css({
+                'color': 'white'
+            })
+            $('.salary').css({
+                'color': 'orangered'
+            })
+
+            $('.details').css({
+                'background-color': 'rgb(49,51,56)',
+                'color': 'white'
+            })
+            $('.below').css({
+                'background-color': '#292a2d',
+                
+            })
+            $('.below p,h2').css({
+                'color': 'white'
+            })
+            $('.career div').css({
+                'background-color': 'rgb(49,51,56)',
+                'color': 'white'
+            })
+            $('.career .salary').css({
+                'color': 'lightskyblue'
+            })
+            // let cv = document.querySelectorAll('.career');
+            // for (let x = 0; x < cv.length; x++) {
+            //     $(cv[x]).on('mouseenter', function () {
+            //         $(this).css({
+            //             'background': 'radial-gradient(rgba(135, 206, 250, 0.4),#292a2d)',
+            //             'border-color': 'lightskyblue'
+            //         })
+            //     })
+            //     $(cv[x]).on('mouseleave', function () {
+            //         $(this).css({
+            //             'background': 'initial'
+            //         })
+            //     })
+            // }
+            // let topcmp = document.querySelectorAll('.topcmp');
+            // for (let x = 0; x < topcmp.length; x++) {
+            //     $(topcmp[x]).on('mouseenter', function () {
+            //         $(this).css({
+            //             'background': 'radial-gradient(rgba(135, 206, 250, 0.4),#292a2d)'
+            //         })
+            //     })
+            //     $(topcmp[x]).on('mouseleave', function () {
+            //         $(this).css({
+            //             'background': 'initial'
+            //         })
+            //     })
+            // }
+            $('.topcmp>div').css({
+                'background-color': 'rgb(49,51,56)',
                 'color': 'white'
             })
             $('footer').css({
@@ -288,6 +464,7 @@ function desktop() {
             $('footer p').css({
                 'color': 'white'
             })
+            co = true;
         }
     });
 
@@ -330,12 +507,13 @@ function desktop() {
         {
             $('#sun').removeClass('haoquang').addClass('sunOff');
             $('#sun').css({
-                'color': '',
+                'color': 'gainsboro',
                 'border': '0',
             })
             $('#moon').removeClass('moonOff').addClass('moonOn');
         }
     })
+
 
     //DẤU TICK MỤC CHỌN MÀU
 
@@ -461,7 +639,6 @@ function desktop() {
     $('.subMenuP').hide();
 }
 
-let co = false; //false = bright mode
 
 
 function mobile() {
@@ -475,6 +652,47 @@ function mobile() {
 
         $('.thongBao').addClass("active");
     });
+
+    if (co == true) {
+
+        $('.topcmps').css('background-color', '#292a2d');
+        $('.underline').css('background', 'white');
+        $('.subMenuP>li>input').css('color', 'white');
+        $('.subMenuP>li>button > i').css('color', 'white');
+        $('.subMenuP>li>a').css('color', 'white');
+        $('.subMenuP>li').css('color', 'white');
+        $('.subMenuP').css('background-color', '#292a2d');
+        $('.phone').css('background-color', '#292a2d');
+        $('.topjobs_p').css('background-color', '#202124');
+        $('.topjobs_p .topjob>div').css('background-color', '#292a2d');
+        $('.imgjob + div,p').css('color', 'white');
+        $('.word').css('color', 'lightskyblue');
+        $('.words').css('color', 'white');
+
+        $('.choice>a:last-child>p').css('color', 'white');
+        $('.bigbackground>p').css('color', 'black');
+
+
+    }
+    else {
+        $('.topcmps').css('background-color', '');
+        $('.underline').css('background', '');
+        $('.subMenuP>li>input').css('color', '');
+        $('.subMenuP>li>button > i').css('color', '');
+        $('.subMenuP>li>a').css('color', '');
+        $('.subMenuP>li').css('color', '');
+        $('.subMenuP').css('background-color', '');
+        $('.phone').css('background-color', '');
+        $('.topjobs_p').css('background-color', '');
+        $('.topjobs_p .topjob>div').css('background-color', '');
+        $('.imgjob + div,p').css('color', '');
+        $('.word').css('color', '');
+        $('.words').css('color', '');
+        $('.choice>a:last-child>p').css('color', '');
+        $('.bigbackground>p').css('color', '');
+
+
+    }
 
     $('.thongBao i').on('click', function () {
 
@@ -619,7 +837,7 @@ function mobile() {
 
 
     $('.open').click(function () {
-        $('#bigImg').attr('src',this.parentElement.parentElement.querySelector('.imgCV img').getAttribute('src'));
+        $('#bigImg').attr('src', this.parentElement.parentElement.querySelector('.imgCV img').getAttribute('src'));
     });
 
 
@@ -672,20 +890,29 @@ function mobile() {
     }
 
     // DARK MODE
+    // DARK MODE
+
     //chỉnh từ dark mode sang brigth mode
     $('#sun').click(function () {
         if (co == true) {
-            co = false;
 
-            $('.form').css('background-color', '');
+            let tabs = document.querySelectorAll('.tab>li');
 
-            if (window.innerWidth > 500) $('.form').css('background-color', '');
-            $(window).resize(function () {
-                if (window.innerWidth > 500) $('.form').css('background-color', '');
-                else $('.form').css('background-color', '');
-            });
+            for (let x = 0; x < tabs.length; x++) {
+                if (tabs[x].classList.contains('changeColorBright')) {
+                    $('.changeColorBright a').css('color', 'black');
+                }
 
-            $('.color').css('background-color', '');
+                else if (tabs[x].classList.contains('changeColorDark') == true) {
+                    $('.changeColorDark a').css('color', 'black');
+
+                }
+
+
+            }
+            $('.below h2').css('color', '');
+
+            $('.main_p .info h1').css('color', '');
             $('.topcmps').css('background-color', '');
             $('.underline').css('background', '');
             $('.subMenuP>li>input').css('color', '');
@@ -697,7 +924,6 @@ function mobile() {
             $('.topjobs_p').css('background-color', '');
             $('.topjobs_p .topjob>div').css('background-color', '');
             $('.imgjob + div,p').css('color', '');
-
             $('#sun').css({
                 'color': 'gold',
                 'border': '3px solid gold'
@@ -708,10 +934,6 @@ function mobile() {
             })
             $('body').css({
                 'background-color': 'white'
-            })
-            $('header').css({
-                'background-color': '',
-                'color': ''
             })
             $('header').css({
                 'background-color': '',
@@ -742,14 +964,12 @@ function mobile() {
             let users = document.querySelectorAll('.users>li');
             for (let y = 0; y < users.length; y++) {
                 $(users[y]).on('mouseenter', function () {
-
                     $(this).css({
                         'color': '',
                         'background-color': ''
                     })
                 })
                 $(users[y]).on('mouseleave', function () {
-
                     $(this).css({
                         'color': '',
                         'background-color': ''
@@ -759,15 +979,47 @@ function mobile() {
             $('.bigbackground>p').css({
                 'color': ''
             })
-            $('.cv>div').css({
-                'background-color': '',
-                'border': ''
+            $('.main').css({
+                'background-color': ''
             })
-            let cv = document.querySelectorAll('.cv');
+            $('.info>div').css({
+                'background-color': '',
+                'color': ''
+            })
+            $('.info>div:first-child i').css({
+                'color': ''
+            })
+            $('.info>div:last-child i').css({
+                'color': ''
+            })
+            $('.lienhe').css({
+                'background-color': '',
+                'color': ''
+            })
+            $('.lienhe a').css({
+                'color': ''
+            })
+            $('.salary').css({
+                'color': ''
+            })
+            $('.details').css({
+                'background-color': '',
+                'color': ''
+            })
+            $('.below').css({
+                'background-color': '',
+                'color': ''
+            })
+            $('.career div').css({
+                'background-color': '',
+                'color': ''
+            })
+            let cv = document.querySelectorAll('.career');
             for (let x = 0; x < cv.length; x++) {
                 $(cv[x]).on('mouseenter', function () {
                     $(this).css({
                         'background': '',
+                        'border-color': ''
                     })
                 })
                 $(cv[x]).on('mouseleave', function () {
@@ -776,19 +1028,21 @@ function mobile() {
                     })
                 })
             }
-            $('.imgCV').css({
-                'background': ''
-            })
-            $('.cv>div>a>p').css({
-                'color': ''
-            })
-            $('.form').css({
-                'background': ''
-            })
-            $('.design').css({
-                'background': ''
-            })
-            $('.color>p').css({
+            let topcmp = document.querySelectorAll('.topcmp');
+            for (let x = 0; x < topcmp.length; x++) {
+                $(topcmp[x]).on('mouseenter', function () {
+                    $(this).css({
+                        'background': ''
+                    })
+                })
+                $(topcmp[x]).on('mouseleave', function () {
+                    $(this).css({
+                        'background': ''
+                    })
+                })
+            }
+            $('.topcmp>div').css({
+                'background-color': '',
                 'color': ''
             })
             $('footer').css({
@@ -800,21 +1054,31 @@ function mobile() {
             $('footer p').css({
                 'color': ''
             })
+            co = false;
         }
     });
     //chuyển từ bright mode sang dark mode
     $('#moon').click(function () {
         if (co == false) {
-            co = true;
-            $('.form').css('background-color', '');
 
-            if (window.innerWidth > 500) $('.form').css('background-color', '#292a2d');
-            $(window).resize(function () {
-                if (window.innerWidth > 500) $('.form').css('background-color', '#292a2d');
-                else $('.form').css('background-color', '');
-            });
-            $('.color').css('background-color', '#292a2d');
-            $('.topcmps').css('background-color', '#292a2d');
+            let tabs = document.querySelectorAll('.tab>li');
+
+            for (let x = 0; x < tabs.length; x++) {
+                if (tabs[x].classList.contains('changeColorBright')) {
+                    $('.changeColorBright a').css('color', 'lightskyblue');
+                }
+
+                else if (tabs[x].classList.contains('changeColorDark') == true) {
+                    $('.changeColorDark a').css('color', 'lightskyblue');
+
+                }
+
+
+            }
+
+
+
+            $('.main_p .info h1').css('color', 'white');
             $('.underline').css('background', 'white');
             $('.subMenuP>li>input').css('color', 'white');
             $('.subMenuP>li>button > i').css('color', 'white');
@@ -825,7 +1089,6 @@ function mobile() {
             $('.topjobs_p').css('background-color', '#202124');
             $('.topjobs_p .topjob>div').css('background-color', 'rgba(0, 0, 0, 0.28)');
             $('.imgjob + div,p').css('color', 'white');
-
             $(this).removeClass('moonOn moonOff').addClass('moonOn');
             $('#sun').css({
                 'color': 'gray',
@@ -878,38 +1141,87 @@ function mobile() {
             $('.bigbackground>p').css({
                 'color': 'black'
             })
-            $('.cv>div').css({
+            $('.main').css({
+                'background-color': '#292a2d'
+            })
+            $('.info>div').css({
+                'background-color': 'rgb(49,51,56)',
+                'color': 'white'
+            })
+            $('.info>div:first-child i').css({
+                'color': 'black'
+            })
+            $('.info>div:last-child i').css({
+                'color': '#97bdd4'
+            })
+            $('.lienhe').css({
+                'background-color': 'rgb(49,51,56)',
+                'color': 'white'
+            })
+            $('.lienhe a').css({
+                'color': 'white'
+            })
+            $('.salary').css({
+                'color': 'white',
+                'background-color': 'transparent'
+            })
+
+            $('.salary > p').css({
+                'color': 'lightskyblue'
+            })
+            $('.location').css({
+                'background-color': 'transparent'
+            });
+            $('.details').css({
+                'background-color': 'rgb(49,51,56)',
+                'color': 'white'
+            })
+            $('.below').css({
                 'background-color': '#292a2d',
-                'border': '0',
-            })
-            let cv = document.querySelectorAll('.cv>div');
-            for (let x = 0; x < cv.length; x++) {
-                $(cv[x]).on('mouseenter', function () {
-                    $(this).css({
-                        'box-shadow': '0 0 2rem 0.5rem rgba(135, 206, 250,0.2)'
-                    })
-                })
-                $(cv[x]).on('mouseleave', function () {
-                    $(this).css({
-                        'box-shadow': ''
-                    })
-                })
-            }
-            $('.imgCV').css({
-                'background': 'rgb(49,51,56)'
-            })
-            $('.cv>div>a>p').css({
                 'color': 'white'
             })
-            $('.choice').css({
-                'background': 'linear-gradient(transparent, rgba(20,42,56,0.3), rgba(28,89,129,0.6))'
-            })
-            $('.design').css({
-                'background': 'rgb(49,51,56)'
-            })
-            $('.color>p').css({
+            $('.career div').css({
+                'background-color': 'rgb(49,51,56)',
                 'color': 'white'
             })
+            $('.career .salary').css({
+                'color': 'lightskyblue'
+            })
+            // let cv = document.querySelectorAll('.career');
+            // for (let x = 0; x < cv.length; x++) {
+            //     $(cv[x]).on('mouseenter', function () {
+            //         $(this).css({
+            //             'background': 'radial-gradient(rgba(135, 206, 250, 0.4),#292a2d)',
+            //             'border-color': 'lightskyblue'
+            //         })
+            //     })
+            //     $(cv[x]).on('mouseleave', function () {
+            //         $(this).css({
+            //             'background': 'initial'
+            //         })
+            //     })
+            // }
+            // let topcmp = document.querySelectorAll('.topcmp');
+            // for (let x = 0; x < topcmp.length; x++) {
+            //     $(topcmp[x]).on('mouseenter', function () {
+            //         $(this).css({
+            //             'background': 'radial-gradient(rgba(135, 206, 250, 0.4),#292a2d)'
+            //         })
+            //     })
+            //     $(topcmp[x]).on('mouseleave', function () {
+            //         $(this).css({
+            //             'background': 'initial'
+            //         })
+            //     })
+            // }
+            $('.topcmp>div').css({
+                'background-color': 'rgb(49,51,56)',
+                'color': 'white'
+            })
+
+            $('.below h2').css('color', 'white');
+
+
             $('footer').css({
                 'background': '#202124'
             })
@@ -919,9 +1231,11 @@ function mobile() {
             $('footer p').css({
                 'color': 'white'
             })
+            co = true;
         }
     });
 
+    // HOVER DARK MODE BUTTONS
     $('#moon').on('mouseenter', function () {
         if (co == false) { //bright mode
             $('#sun').removeClass('haoquang').addClass('sunOff').on('animationend', function () {
@@ -960,7 +1274,7 @@ function mobile() {
         {
             $('#sun').removeClass('haoquang').addClass('sunOff');
             $('#sun').css({
-                'color': '',
+                'color': 'gainsboro',
                 'border': '0',
             })
             $('#moon').removeClass('moonOff').addClass('moonOn');
